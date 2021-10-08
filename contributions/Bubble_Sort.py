@@ -7,9 +7,7 @@ Inplace Algorithm-->(we directly change inside main arr)
 Time Complexity-->O(n^2)
 
 """
-
-
-def Binary_Sort(arr):
+def BubbleSort(arr):
     for i in range(len(arr)-1):
         swapped=False
         for j in range(len(arr)-1-i):
@@ -21,7 +19,5 @@ def Binary_Sort(arr):
             break
     print(arr)
     return arr
-
-
-a=[1,2,3,4,5]
-Binary_Sort(a)
+arr=[1,2,3,4,5] #input 
+BubbleSort(arr)
