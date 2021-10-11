@@ -3,7 +3,6 @@ Counting sort is a sorting technique based on keys between a specific range. It 
 distinct key values (kind of hashing). 
 Then doing some arithmetic to calculate the position of each object in the output sequence.
 
-
 Time Complexity-->Time Complexity: O(n+k) where n is the number of elements in input array and k is the range of input. 
 Auxiliary Space: O(n+k)
 
@@ -13,7 +12,8 @@ Auxiliary Space: O(n+k)
 4. Counting sort uses a partial hashing to count the occurrence of the data object in O(1). 
 5. Counting sort can be extended to work for negative inputs also.
 """
-def CountingSort(arr):
+
+def Counting_Sort(arr):
     count=[0]*len(arr)
     out=[]
     for item in arr:
@@ -23,7 +23,7 @@ def CountingSort(arr):
             out.extend([i]*count[i])
     print(out)
 
-def CountingSortnew(arr):
+def Counting_Sort_new(arr):
     count=[0]*(max(arr)+1)
     for item in arr:
         count[item]+=1
@@ -40,5 +40,5 @@ def CountingSortnew(arr):
 
 
 arr=[4,2,3,6,3,1,6,3,4]
-CountingSort(arr)
-CountingSortnew(arr)
+Counting_Sort(arr)
+Counting_Sort_new(arr)
