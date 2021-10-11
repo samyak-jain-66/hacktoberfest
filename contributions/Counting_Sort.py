@@ -12,8 +12,7 @@ Auxiliary Space: O(n+k)
 4. Counting sort uses a partial hashing to count the occurrence of the data object in O(1). 
 5. Counting sort can be extended to work for negative inputs also.
 """
-
-def Counting_Sort(arr):
+def counting_sort(arr):
     count=[0]*len(arr)
     out=[]
     for item in arr:
@@ -23,7 +22,8 @@ def Counting_Sort(arr):
             out.extend([i]*count[i])
     print(out)
 
-def Counting_Sort_new(arr):
+    
+def counting_sort_new(arr):
     count=[0]*(max(arr)+1)
     for item in arr:
         count[item]+=1
@@ -37,8 +37,6 @@ def Counting_Sort_new(arr):
     print(out)
 
 
-
-
 arr=[4,2,3,6,3,1,6,3,4]
-Counting_Sort(arr)
-Counting_Sort_new(arr)
+counting_sort(arr)
+counting_sort_new(arr)
