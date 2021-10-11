@@ -5,7 +5,7 @@ Iterative Algorithm
 Inplace Algorithm-->(we directly change inside main arr)
 Time Complexity-->O(n^2)
 """
-def Bubble_Sort(arr):
+def bubble_sort(arr):
     for i in range(len(arr)-1):
         swapped=False
         for j in range(len(arr)-1-i):
@@ -21,4 +21,4 @@ def Bubble_Sort(arr):
 
 if __name__ == "__main__":
     arr=[1,2,3,4,5] #input 
-    Bubble_Sort(arr)
+    bubble_sort(arr)
