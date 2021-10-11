@@ -1,7 +1,6 @@
 """
 It is the most basic type of sorting algorithm in which we compare each element with its adjecent element and swap them
 in each iteration we get a greatest value and the end.
-
 Iterative Algorithm
 Inplace Algorithm-->(we directly change inside main arr)
 Time Complexity-->O(n^2)
@@ -18,5 +17,8 @@ def Bubble_Sort(arr):
             break
     print(arr)
     return arr
-arr=[1,2,3,4,5] #input 
-Bubble_Sort(arr)
+
+
+if __name__ == "__main__":
+    arr=[1,2,3,4,5] #input 
+    Bubble_Sort(arr)
