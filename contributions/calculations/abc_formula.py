@@ -1,7 +1,7 @@
 def abc_formula(a, b, c):
     print_equation(a, b, c)
-    discrimitant = (b ** 2) - (4 * a * c)
-    if discrimitant > 0:
+    discriminant = (b ** 2) - (4 * a * c)
+    if discriminant > 0:
         from math import sqrt
 
         discriminant_root = sqrt((b ** 2) - (4 * a * c))
@@ -10,13 +10,13 @@ def abc_formula(a, b, c):
         print("x1 =", x1)
         print("x2 =", x2)
 
-    elif discrimitant == 0:
+    elif discriminant == 0:
         x = -b / (2 * a)
         print("x =", x)
     else:  # discriminant < 0
         from cmath import sqrt as complex_sqrt
 
-        discriminant_root = complex_sqrt(discrimitant)
+        discriminant_root = complex_sqrt(discriminant)
         x1 = (-b + discriminant_root) / (2 * a)
         x2 = (-b - discriminant_root) / (2 * a)
         print(f"x1 = {x1.real} + √(-1) * {x1.imag}")

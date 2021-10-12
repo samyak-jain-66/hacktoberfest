@@ -6,9 +6,9 @@ class ABCFormula:
 
     def solve(self):
         self._print_equation()
-        discrimitant = (self.b ** 2) - (4 * self.a * self.c)
+        discriminant = (self.b ** 2) - (4 * self.a * self.c)
 
-        if discrimitant > 0:
+        if discriminant > 0:
             from math import sqrt
 
             discriminant_root = sqrt((self.b ** 2) - (4 * self.a * self.c))
@@ -17,14 +17,14 @@ class ABCFormula:
             print("x1 =", x1)
             print("x2 =", x2)
 
-        elif discrimitant == 0:
+        elif discriminant == 0:
             x = -self.b / (2 * self.a)
             print("x =", x)
 
         else:  # discriminant < 0
             from cmath import sqrt as complex_sqrt
 
-            discriminant_root = complex_sqrt(discrimitant)
+            discriminant_root = complex_sqrt(discriminant)
             x1 = (-self.b + discriminant_root) / (2 * self.a)
             x2 = (-self.b - discriminant_root) / (2 * self.a)
             print(f"x1 = {x1.real} + √(-1) * {x1.imag}")
