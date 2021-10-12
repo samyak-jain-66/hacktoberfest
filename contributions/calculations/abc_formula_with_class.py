@@ -1,39 +1,45 @@
 class ABCFormula:
     def __init__(self, a, b, c):
-        self._calculate_x(a, b, c)
+        self.a = a
+        self.b = b
+        self.c = c
 
-    def _calculate_x(self, a, b, c):
-        self._print_equation(a, b, c)
-        discrimitant = (b ** 2) - (4 * a * c)
+    def solve(self):
+        self._print_equation()
+        discrimitant = (self.b ** 2) - (4 * self.a * self.c)
 
         if discrimitant > 0:
             from math import sqrt
 
-            discriminant_root = sqrt((b ** 2) - (4 * a * c))
-            x1 = (-b + discriminant_root) / (2 * a)
-            x2 = (-b - discriminant_root) / (2 * a)
+            discriminant_root = sqrt((self.b ** 2) - (4 * self.a * self.c))
+            x1 = (-self.b + discriminant_root) / (2 * self.a)
+            x2 = (-self.b - discriminant_root) / (2 * self.a)
             print("x1 =", x1)
             print("x2 =", x2)
 
         elif discrimitant == 0:
-            x = -b / (2 * a)
+            x = -self.b / (2 * self.a)
             print("x =", x)
 
         else:  # discriminant < 0
             from cmath import sqrt as complex_sqrt
 
             discriminant_root = complex_sqrt(discrimitant)
-            x1 = (-b + discriminant_root) / (2 * a)
-            x2 = (-b - discriminant_root) / (2 * a)
+            x1 = (-self.b + discriminant_root) / (2 * self.a)
+            x2 = (-self.b - discriminant_root) / (2 * self.a)
             print(f"x1 = {x1.real} + √(-1) * {x1.imag}")
             print(f"x2 = {x2.real} - √(-1) * {x2.imag}")
 
-    def _print_equation(self, a, b, c):
-        b_sign = "-" if b < 0 else "+"
-        c_sign = "-" if c < 0 else "+"
-        print(f"\n{a}x² {b_sign} {abs(b)}x {c_sign} {abs(c)} = 0")
+    def _print_equation(self):
+        b_sign = "-" if self.b < 0 else "+"
+        c_sign = "-" if self.c < 0 else "+"
+        print(f"\n{self.a}x² {b_sign} {abs(self.b)}x {c_sign} {abs(self.c)} = 0")
 
 
-ABCFormula(1, 0, -8)
-ABCFormula(1, 2, 1)
-ABCFormula(a=1, b=2, c=4)
+ABCFormula(1, 0, -8).solve()
+
+formula = ABCFormula(1, 2, 1)
+formula.solve()
+
+formula = ABCFormula(a=1, b=2, c=4)
+formula.solve()
