@@ -13,9 +13,9 @@ def palindrome_finder(string):
     string_reversed= string_lowercase[::-1]
     
     if string_lowercase == string_reversed:
-        return("Yes!" + string +" is a palindrome.")
+        return("Yes! " + string +" is a palindrome.")
     else:
-        return("Opps!"+ string + " is not a palindrome. Try again!")
+        return("Opps! "+ string + " is not a palindrome. Try again!")
     return(string)    
         
 print(palindrome_finder("47")) 
