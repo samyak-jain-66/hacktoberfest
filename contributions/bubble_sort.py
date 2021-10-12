@@ -20,5 +20,5 @@ def bubble_sort(arr):
 
 
 if __name__ == "__main__":
-    arr=[1,2,3,4,5] #input 
+    arr=[2,5,8,6,1] #input 
     bubble_sort(arr)
