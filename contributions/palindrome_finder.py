@@ -20,5 +20,3 @@ def palindrome_finder(string):
         
 print(palindrome_finder("47")) 
 print(palindrome_finder("Civic"))
-
-    
