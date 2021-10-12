@@ -2,22 +2,14 @@ def palindrome_finder(string):
     
     '''
     This function checks if a given string is a palindrome or not.
-    
-    
     Example:
     Word
     Radar               Palindrome
     Bat                 Not a palindrome
-    
-    
     '''
 
-    string_lowercase = string.lower()
-
-    #this will makesure there is no confusion in upper and lower case of same letter.
     
-    
-    
+    string_lowercase = string.lower()#this will makesure there is no confusion in upper and lower case of same letter
     string_reversed= string_lowercase[::-1]
     
     if string_lowercase == string_reversed:
